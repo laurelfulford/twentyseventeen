@@ -258,6 +258,60 @@ function twentyseventeen_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'twentyseventeen_scripts' );
 
+
+/**
+ * Add custom image sizes attribute to enhance responsive image functionality
+ * for content images.
+ *
+ * @since Twenty Seventeen 1.0
+ *
+ * @param string $sizes A source size value for use in a 'sizes' attribute.
+ * @param array  $size  Image size. Accepts an array of width and height
+ *                      values in pixels (in that order).
+ * @return string A source size value for use in a content image 'sizes' attribute.
+ */
+function twentyseventeen_content_image_sizes_attr( $sizes, $size ) {
+	$width = $size[0]; // Image width.
+
+	580 <= $width && $sizes = '(max-width: 768px) 628px, (max-width: 880px) 473px, 580px';
+
+	if ( 'one-column' === get_theme_mod( 'page_options' ) ) {
+		740 <= $width && $sizes = '(max-width: 804px) 93vw, 740px';
+	} else {
+		580 > $width && $sizes = '(max-width: ' . $width . 'px) 93vw, ' . $width . 'px';
+	}
+
+	return $sizes;
+}
+add_filter( 'wp_calculate_image_sizes', 'twentyseventeen_content_image_sizes_attr', 10 , 2 );
+
+
+/**
+ * Add custom image sizes attribute to enhance responsive image functionality
+ * for post thumbnails.
+ *
+ * @since Twenty Seventeen 1.0
+ *
+ * @param array $attr Attributes for the image markup.
+ * @param int   $attachment Image attachment ID.
+ * @param array $size Registered image size or flat array of height and width dimensions.
+ * @return string A source size value for use in a post thumbnail 'sizes' attribute.
+ */
+function twentyseventeen_post_thumbnail_sizes_attr( $attr, $attachment, $size ) {
+
+	if ( 'twentyseventeen-featured-image' === $size ) {
+		$attr['sizes'] = '(max-width: 2000px) 100vw, 2000px';
+	}
+
+	if ( 'twentyseventeen-small-featured-image' === $size ) {
+		$attr['sizes'] = '(max-width: 768px) 628px, (max-width: 880px) 473px, 580px';
+	}
+
+	return $attr;
+}
+add_filter( 'wp_get_attachment_image_attributes', 'twentyseventeen_post_thumbnail_sizes_attr', 10 , 3 );
+
+
 /**
  * Implement the Custom Header feature.
  */
