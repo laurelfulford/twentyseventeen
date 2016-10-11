@@ -46,6 +46,8 @@ function twentyseventeen_setup() {
 
 	add_image_size( 'twentyseventeen-featured-image', 2000, 1200, true );
 
+	add_image_size( 'twentyseventeen-small-featured-image', 628, 9999 );
+
 	add_image_size( 'twentyseventeen-thumbnail-avatar', 100, 100, true );
 
 	// This theme uses wp_nav_menu() in two locations.
