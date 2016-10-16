@@ -1285,6 +1285,7 @@ body {
 
 .custom-logo-link img {
 	display: inline-block;
+	margin-bottom: 1em;
 	max-height: 200px;
 	max-width: 100%;
 	width: auto;
@@ -1301,11 +1302,8 @@ body:not(.title-tagline-hidden) .custom-logo-link {
 	vertical-align: middle;
 }
 
+body:not(.title-tagline-hidden) .custom-logo-link img,
 body:not(.home) .custom-logo-link img {
-	max-height: 100px;
-}
-
-body:not(.title-tagline-hidden) .custom-logo-link img {
 	margin-bottom: 0;
 	max-height: 80px;
 }
