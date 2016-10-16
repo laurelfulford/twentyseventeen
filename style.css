@@ -1283,9 +1283,15 @@ body {
 	opacity: 0.8;
 }
 
-.custom-logo-link img {
+.custom-logo-link {
 	display: inline-block;
-	max-height: 200px;
+	padding-right: 1em;
+	vertical-align: middle;
+	width: auto;
+}
+
+.custom-logo-link img {
+	max-height: 80px;
 	max-width: 100%;
 	width: auto;
 }
@@ -1293,21 +1299,6 @@ body {
 .custom-logo-link a:hover,
 .custom-logo-link a:focus {
 	opacity: 0.9;
-}
-
-body:not(.title-tagline-hidden) .custom-logo-link {
-	display: inline-block;
-	margin-right: 1em;
-	vertical-align: middle;
-}
-
-body:not(.home) .custom-logo-link img {
-	max-height: 100px;
-}
-
-body:not(.title-tagline-hidden) .custom-logo-link img {
-	margin-bottom: 0;
-	max-height: 80px;
 }
 
 body:not(.title-tagline-hidden) .site-branding-text {
@@ -2766,6 +2757,26 @@ article.panel-placeholder {
 
 	.no-header-image .custom-header-image {
 		min-height: 20vh;
+	}
+
+	.custom-logo-link {
+		padding-right: 2em;
+	}
+
+	.custom-logo-link img {
+		max-width: 350px;
+	}
+
+	.home:not(.no-header-image) .custom-logo-link img {
+		max-width: 500px;
+	}
+
+	.title-tagline-hidden.home:not(.no-header-image) .custom-logo-link img {
+		max-height: 200px;
+	}
+
+	.title-tagline-hidden.home:not(.no-header-image) .custom-logo-link img {
+		max-width: 700px;
 	}
 
 	.site-title {

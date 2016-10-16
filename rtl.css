@@ -64,9 +64,9 @@ input[type="checkbox"] {
 
 /* Site Branding */
 
-body:not(.title-tagline-hidden) .custom-logo-link {
-	margin-left: 1em;
-	margin-right: 0;
+.custom-logo-link {
+	padding-left: 1em;
+	padding-right: 0;
 }
 
 /* Main Navigation */
@@ -261,6 +261,15 @@ body:not(.title-tagline-hidden) .custom-logo-link {
 	.error404 #primary {
 		float: none;
 	}
+
+	/* Branding */
+
+	.custom-logo-link {
+		padding-left: 2em;
+		padding-right: 0;
+	}
+
+	/* Navigation */
 
 	.main-navigation ul ul {
 		padding-right: 0;
