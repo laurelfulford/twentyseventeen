@@ -90,9 +90,8 @@ function twentyseventeen_setup() {
 
 	// Add theme support for Custom Logo.
 	add_theme_support( 'custom-logo', array(
-		'width'       => 1000,
-		'height'      => 1000,
-		'flex-width'  => true,
+		'width'       => 250,
+		'height'      => 250,
 		'flex-height' => true,
 	) );
 
@@ -238,7 +237,7 @@ function twentyseventeen_colors_css_wrap() {
 		<?php echo twentyseventeen_custom_colors_css(); ?>
 	</style>
 <?php }
-//add_action( 'wp_head', 'twentyseventeen_colors_css_wrap' );
+add_action( 'wp_head', 'twentyseventeen_colors_css_wrap' );
 
 /**
  * Enqueue scripts and styles.
