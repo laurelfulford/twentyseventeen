@@ -62,6 +62,13 @@ input[type="checkbox"] {
 	right: -10000px;
 }
 
+/* Site Branding */
+
+body:not(.title-tagline-hidden) .custom-logo-link {
+	margin-left: 1em;
+	margin-right: 0;
+}
+
 /* Main Navigation */
 
 .main-navigation ul {
