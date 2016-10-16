@@ -238,7 +238,7 @@ function twentyseventeen_colors_css_wrap() {
 		<?php echo twentyseventeen_custom_colors_css(); ?>
 	</style>
 <?php }
-add_action( 'wp_head', 'twentyseventeen_colors_css_wrap' );
+//add_action( 'wp_head', 'twentyseventeen_colors_css_wrap' );
 
 /**
  * Enqueue scripts and styles.

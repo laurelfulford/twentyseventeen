@@ -1247,6 +1247,7 @@ body {
 }
 
 .site-title {
+	clear: none;
 	font-size: 24px;
 	font-size: 1.5rem;
 	font-weight: 800;
@@ -1283,13 +1284,32 @@ body {
 }
 
 .custom-logo-link img {
+	display: inline-block;
+	margin-bottom: 1em;
 	max-height: 200px;
+	max-width: 100%;
 	width: auto;
 }
 
 .custom-logo-link a:hover,
 .custom-logo-link a:focus {
 	opacity: 0.9;
+}
+
+body:not(.title-tagline-hidden) .custom-logo-link {
+	display: inline-block;
+	margin-right: 1em;
+	vertical-align: middle;
+}
+
+body:not(.title-tagline-hidden) .custom-logo-link img {
+	margin-bottom: 0;
+	max-height: 80px;
+}
+
+body:not(.title-tagline-hidden) .site-branding-text {
+	display: inline-block;
+	vertical-align: middle;
 }
 
 .custom-header {
@@ -2684,14 +2704,6 @@ article.panel-placeholder {
 	}
 
 	.custom-logo-link img {
-		max-height: 400px;
-		max-width: 400px;
-	}
-
-	.twentyseventeen-front-page:not(.no-header-image) .custom-logo-link img,
-	.home.blog:not(.no-header-image) .custom-logo-link img {
-		max-height: 500px;
-		max-width: 500px;
 	}
 
 	/* Navigation */
