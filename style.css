@@ -2768,20 +2768,13 @@ article.panel-placeholder {
 		padding-right: 2em;
 	}
 
-	.custom-logo-link img {
+	.custom-logo-link img,
+	body.home.title-tagline-hidden:not(.no-header-image) .custom-logo-link img {
 		max-width: 350px;
-	}
-
-	.home:not(.no-header-image) .custom-logo-link img {
-		max-width: 500px;
 	}
 
 	.title-tagline-hidden.home:not(.no-header-image) .custom-logo-link img {
 		max-height: 200px;
-	}
-
-	.title-tagline-hidden.home:not(.no-header-image) .custom-logo-link img {
-		max-width: 700px;
 	}
 
 	.site-title {

@@ -323,9 +323,7 @@ add_filter( 'wp_calculate_image_sizes', 'twentyseventeen_content_image_sizes_att
  * @return string A source size value for use in a post thumbnail 'sizes' attribute.
  */
 function twentyseventeen_post_thumbnail_sizes_attr( $attr, $attachment, $size ) {
-	if ( 'custom-logo') {
-		$attr['sizes'] = '(max-width: 767px) 100vw, 700px';
-	} else if ( is_archive() || is_search() || is_home() ) {
+	if ( is_archive() || is_search() || is_home() ) {
 		$attr['sizes'] = '(max-width: 767px) 89vw, (max-width: 1000px) 54vw, (max-width: 1071px) 543px, 580px';
 	} else {
 		$attr['sizes'] = '100vw';
