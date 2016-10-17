@@ -2006,11 +2006,10 @@ body:not(.twentyseventeen-front-page) .entry-header {
 
 .site-footer {
 	border-top: 1px solid #eee;
-	padding: 0 0 1.5em;
 }
 
 .site-footer .wrap {
-	padding-top: 2em;
+	padding: 2em 0;
 }
 
 /* Footer widgets */
@@ -2025,7 +2024,6 @@ body:not(.twentyseventeen-front-page) .entry-header {
 .social-navigation {
 	font-size: 16px;
 	font-size: 1.0rem;
-	margin-bottom: 1em;
 }
 
 .social-navigation ul {
@@ -3682,7 +3680,12 @@ article.panel-placeholder {
 
 	.site-info {
 		float: left;
+<<<<<<< HEAD
 		padding: 0.5em 0 0;
+=======
+		margin-left: 6%;
+		padding: 0.7em 0 0;
+>>>>>>> Adjust spacing around social menu based on feedback.
 		width: 58%;
 	}
 
