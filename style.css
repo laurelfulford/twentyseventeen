@@ -1291,9 +1291,14 @@ body {
 }
 
 .custom-logo-link img {
+	display: inline-block;
 	max-height: 80px;
-	max-width: 100%;
 	width: auto;
+}
+
+body.home.title-tagline-hidden:not(.no-header-image) .custom-logo-link img {
+	max-height: 200px;
+	max-width: 100%;
 }
 
 .custom-logo-link a:hover,
