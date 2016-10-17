@@ -2009,7 +2009,8 @@ body:not(.twentyseventeen-front-page) .entry-header {
 }
 
 .site-footer .wrap {
-	padding: 2em 0;
+	padding-bottom: 2em;
+	padding-top: 2em;
 }
 
 /* Footer widgets */
@@ -2024,6 +2025,7 @@ body:not(.twentyseventeen-front-page) .entry-header {
 .social-navigation {
 	font-size: 16px;
 	font-size: 1.0rem;
+	margin-bottom: 1em;
 }
 
 .social-navigation ul {
@@ -3675,6 +3677,7 @@ article.panel-placeholder {
 	.social-navigation {
 		clear: left;
 		float: left;
+		margin-bottom: 0;
 		width: 36%;
 	}
 
