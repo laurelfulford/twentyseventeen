@@ -3751,16 +3751,21 @@ article.panel-placeholder {
 
 @media screen and ( min-width: 55em ) {
 
-	.custom-header-image {
-		background-attachment: fixed;
-	}
-
+	.custom-header-image,
 	.twentyseventeen-front-page:not(.no-header-image) .custom-header-image,
-	.home.blog:not(.no-header-image) .custom-header-image {
+	.home.blog:not(.no-header-image) .custom-header-image,
+	.panel-image {
 		background-attachment: fixed;
 	}
 
-	.panel-image {
+	/* Overriding Safari-specific background-attachment value for non-iOS devices. */
+	_:-webkit-full-screen,
+	_::-webkit-full-page-media,
+	_:future,
+	:root .custom-header-image,
+	:root .twentyseventeen-front-page:not(.no-header-image) .custom-header-image,
+	:root .home.blog:not(.no-header-image) .custom-header-image,
+	:root .panel-image {
 		background-attachment: fixed;
 	}
 }
@@ -3813,6 +3818,18 @@ article.panel-placeholder {
 	.admin-bar .site-navigation-fixed.navigation-top,
 	.admin-bar .site-navigation-hidden.navigation-top {
 		top: 46px;
+	}
+}
+
+/* Work around specifically for Safari; "fixed" causes display issues. Only needed for iOS, so is overridden for non-iOS devices. */
+@media screen and ( min-color-index: 0 ) and ( -webkit-min-device-pixel-ratio: 0 ) {
+	@media {
+		.custom-header-image,
+		.twentyseventeen-front-page:not(.no-header-image) .custom-header-image,
+		.home.blog:not(.no-header-image) .custom-header-image,
+		.panel-image {
+			background-attachment: scroll;
+		}
 	}
 }
 
