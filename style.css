@@ -3684,12 +3684,8 @@ article.panel-placeholder {
 
 	.site-info {
 		float: left;
-<<<<<<< HEAD
-		padding: 0.5em 0 0;
-=======
 		margin-left: 6%;
 		padding: 0.7em 0 0;
->>>>>>> Adjust spacing around social menu based on feedback.
 		width: 58%;
 	}
 
