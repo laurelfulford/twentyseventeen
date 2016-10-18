@@ -2009,7 +2009,7 @@ body:not(.twentyseventeen-front-page) .entry-header {
 }
 
 .site-footer .wrap {
-	padding-bottom: 2em;
+	padding-bottom: 1.5em;
 	padding-top: 2em;
 }
 
@@ -2044,7 +2044,7 @@ body:not(.twentyseventeen-front-page) .entry-header {
 	color: #fff;
 	display: inline-block;
 	height: 40px;
-	margin: 0 1em 0 0;
+	margin: 0 1em 0.5em 0;
 	text-align: center;
 	width: 40px;
 }
@@ -2066,6 +2066,7 @@ body:not(.twentyseventeen-front-page) .entry-header {
 .site-info {
 	font-size: 14px;
 	font-size: 0.875rem;
+	margin-bottom: 1.0em;
 }
 
 .site-info a {
