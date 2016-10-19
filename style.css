@@ -1590,6 +1590,10 @@ body:not(.title-tagline-hidden) .site-branding-text {
 	right: 0;
 }
 
+.has-header-image:not(.twentyseventeen-front-page):not(.home) .custom-header-image {
+	background-position: center bottom;
+}
+
 body:not(.has-header-image) .custom-header-image {
 	padding: 5% 0;
 }
@@ -3183,11 +3187,9 @@ article.panel-placeholder {
 	.custom-header-image {
 		height: 165px;
 		position: relative;
-		background-position: bottom;
 	}
 
 	.has-header-image:not(.twentyseventeen-front-page):not(.home) .custom-header-image {
-		background-position: center center;
 		bottom: 0;
 		height: auto;
 		left: 0;
