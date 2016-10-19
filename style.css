@@ -3187,6 +3187,7 @@ article.panel-placeholder {
 	}
 
 	.has-header-image:not(.twentyseventeen-front-page):not(.home) .custom-header-image {
+		background-position: center center;
 		bottom: 0;
 		height: auto;
 		left: 0;
